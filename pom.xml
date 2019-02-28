@@ -13,5 +13,25 @@
     <module>submodule-1</module>
     <module>submodule-2</module>
   </modules>
+  
+   <build>
+    <plugins>
+      <!-- Added this plugin so that we can run the program easily with mvn test -->
+
+	  <plugin>
+		<groupId>org.owasp</groupId>
+		<artifactId>dependency-check-maven</artifactId>
+		<version>3.1.0</version>
+		<executions>
+		<execution>
+			<goals>
+			  <goal>check</goal>
+			</goals>
+		</execution>
+		</executions>
+	  </plugin>
+	  
+    </plugins>
+  </build>
 
 </project>
